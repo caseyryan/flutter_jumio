@@ -1,0 +1,17 @@
+<component name="libraryTable">
+  <library name="Flutter for Android">
+    <CLASSES>
+<<<<<<< HEAD
+      <root url="jar://D:\FlutterSDK/bin/cache/artifacts/engine/android-arm/flutter.jar!/" />
+=======
+      <root url="jar://D:/FlutterSDK/bin/cache/artifacts/engine/android-arm/flutter.jar!/" />
+>>>>>>> 0b1d3e523618b0615c54b559b92d8e994ea9bfcc
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+<<<<<<< HEAD
+</component>
+=======
+</component>
+>>>>>>> 0b1d3e523618b0615c54b559b92d8e994ea9bfcc

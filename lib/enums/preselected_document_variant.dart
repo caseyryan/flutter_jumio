@@ -1,0 +1,4 @@
+enum PreselectedDocumentVariant {
+  PAPER,
+  PLASTIC
+}

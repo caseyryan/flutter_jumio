@@ -1,0 +1,3 @@
+enum DataCenter {
+  EU, US
+}

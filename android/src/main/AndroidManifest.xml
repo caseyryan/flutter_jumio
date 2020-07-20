@@ -1,0 +1,54 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+package="com.softmaestri.flutter_jumio">
+
+<uses-permission android:name="android.permission.VIBRATE"/>
+<uses-permission android:name="android.permission.INTERNET"/>
+<uses-feature android:name="android.hardware.camera" android:required="false"/>
+
+<application>
+    <meta-data
+        android:name="com.google.android.gms.version"
+        android:value="@integer/google_play_services_version" />
+
+    <meta-data
+        android:name="com.google.android.gms.vision.DEPENDENCIES"
+        android:value="barcode, face"
+        tools:replace="android:value"/>
+    <activity
+        android:name="com.jumio.nv.NetverifyActivity"
+        android:windowSoftInputMode="adjustResize"
+        android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
+        android:hardwareAccelerated="true"
+        android:theme="@style/Theme.Netverify"/>
+    <activity
+        android:name="com.jumio.bam.BamActivity"
+        android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
+        android:hardwareAccelerated="true"
+        android:theme="@style/Theme.Bam"/>
+    <activity
+        android:name="com.jumio.dv.DocumentVerificationActivity"
+        android:windowSoftInputMode="adjustResize"
+        android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
+        android:hardwareAccelerated="true"
+        android:theme="@style/Theme.DocumentVerification"/>
+    <activity
+        android:name="com.jumio.auth.AuthenticationActivity"
+        android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
+        android:hardwareAccelerated="true"
+        android:theme="@style/Theme.Authentication"
+        android:windowSoftInputMode="adjustResize"/>
+
+    -keep class net.sf.scuba.smartcards.IsoDepCardService {*;}
+    -keep class org.jmrtd.** { *; }
+    -keep class net.sf.scuba.** {*;}
+    -keep class org.bouncycastle.** {*;}
+    -keep class org.ejbca.** {*;}
+
+    -dontwarn java.nio.**
+    -dontwarn org.codehaus.**
+    -dontwarn org.ejbca.**
+    -dontwarn org.bouncycastle.**
+</application>
+
+</manifest>
